@@ -1,0 +1,90 @@
+libstring-shellquote-perl (1.04-1) unstable; urgency=medium
+
+  * Take over for the Debian Perl Group; Closes: #862646 -- RFA/ITA
+  * debian/control: Added: Vcs-Git field (source stanza); Vcs-Browser
+    field (source stanza); Homepage field (source stanza). Changed:
+    Maintainer set to Debian Perl Group <pkg-perl-
+    maintainers@lists.alioth.debian.org> (was: Roderick Schertler
+    <roderick@argon.org>).
+  * Replace (build-)dependency on ancient version of perl with a dependency on
+    perl without a version (as permitted by Debian Policy 3.8.3).
+  * debian/watch: use metacpan-based URL.
+  * Mark package as autopkgtest-able.
+  * Declare compliance with Debian Policy 4.0.0.
+  * Switch to source format "3.0 (quilt)".
+  * debian/rules: use dh(1). And don't install README anymore.
+  * debian/copyright: switch formatting to Copyright-Format 1.0.
+  * Improve short/long description.
+  * Add /me to Uploaders.
+
+  * New upstream release. Closes: #673364, #699518
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 04 Aug 2017 12:23:55 -0400
+
+libstring-shellquote-perl (1.03-1.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * changed from debhelper compatability level 3 to 9:
+    closes: #800302
+    - changed (control) Build-Depends: debhelper (>= 9)
+    - added (control) Depends: ${misc:Depends}
+    - removed (rules) export DH_COMPAT=3
+    - added new (compat) file
+    - replaced (rules) (depricated) dh_clean -k
+      with dh_prep
+  * resolved lintian warnings:
+    - changed (copyright) FSF address
+    - updated (control) ancient-standards-version 3.6.1 to 3.9.6
+
+ -- Andy Simpkins <rattusrattus@debian.org>  Sat, 20 Feb 2016 16:43:17 +0000
+
+libstring-shellquote-perl (1.03-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix "FTBFS with perl 5.22 in experimental (MakeMaker changes)":
+    use DESTDIR in debian/rules.
+    (Closes: #795631)
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 26 Aug 2015 18:20:18 +0200
+
+libstring-shellquote-perl (1.03-1) unstable; urgency=low
+
+  * New upstream release (only change is addition of shell-quote script).
+
+ -- Roderick Schertler <roderick@argon.org>  Tue,  3 May 2005 07:04:13 -0400
+
+libstring-shellquote-perl (1.02-1) unstable; urgency=low
+
+  * New upstream release.
+  * Change section to "perl".
+  * Bump Standards-Version to 3.6.1 (no changes).
+
+ -- Roderick Schertler <roderick@argon.org>  Tue,  8 Apr 2003 09:08:22 -0400
+
+libstring-shellquote-perl (1.00-4) unstable; urgency=low
+
+  * Don't install extraneous empty directories.
+
+ -- Roderick Schertler <roderick@argon.org>  Tue, 31 Jul 2001 10:37:13 -0400
+
+libstring-shellquote-perl (1.00-3) unstable; urgency=low
+
+  * Update to policy 3.5.2 (closes: #91196, #91561).
+  * Update to latest Perl policy.
+
+ -- Roderick Schertler <roderick@argon.org>  Mon,  9 Apr 2001 08:10:41 -0400
+
+libstring-shellquote-perl (1.00-2) unstable; urgency=low
+
+  * Simple updates for 3.0.0 standards.
+  * Simple updates for new Perl policy.
+
+ -- Roderick Schertler <roderick@argon.org>  Wed, 14 Jul 1999 15:03:00 -0400
+
+libstring-shellquote-perl (1.00-1) unstable; urgency=low
+
+  * Initial version.
+
+ -- Roderick Schertler <roderick@argon.org>  Mon, 28 Dec 1998 22:50:19 -0500
+
+$Id: changelog,v 1.6 2005/05/03 11:05:03 roderick Exp $

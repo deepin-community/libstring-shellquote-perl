@@ -1,0 +1,15 @@
+Description: adjust path under autopkgtest
+Origin: vendor
+Author: gregor herrmann <gregoa@debian.org>
+Last-Update: 2017-08-04
+
+--- a/test.t
++++ b/test.t
+@@ -84,6 +84,7 @@
+ sub via_shell {
+     my @args = @_;
+     my $cmd = 'blib/script/shell-quote';
++    $cmd = '/usr/bin/shell-quote' if $ENV{ADTTMP};
+     my $pid = open PIPE, '-|';
+     defined $pid
+ 	or return "can't fork: $!\n";
